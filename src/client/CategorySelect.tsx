@@ -1,6 +1,5 @@
-import { useContext } from 'react';
 import { ICategory, ITransaction } from './utils/interfaces';
-import { DataContext } from './DataContextProvider';
+import useDataContext from './hooks/useDataContext';
 
 type Props = {
   onChange: (categoryId: number, transaction: ITransaction) => void;
@@ -8,7 +7,7 @@ type Props = {
 };
 
 function CategorySelect({ transaction, onChange }: Props) {
-  const allData = useContext(DataContext);
+  const allData = useDataContext();
 
   return (
     <select

@@ -15,6 +15,7 @@ function ProcessTransactions() {
 
   // data is passed from Upload or SplitTransactionModal
   const { state } = useLocation();
+  console.log(state);
 
   // this URL param is passed if we are splitting an existing transaction into multiple
   const { processParam } = useParams();

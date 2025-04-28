@@ -14,7 +14,7 @@ function Upload() {
   useEffect(() => {
     axios
       .get('/data-last-import')
-      .then((res) => setLastImportDate(res.data[0][0].lastImportDate))
+      .then((res) => setLastImportDate(res.data[0].lastImportDate))
       .catch((error) => console.error(error));
   }, []);
 

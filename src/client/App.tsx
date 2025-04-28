@@ -1,11 +1,9 @@
-import './App.css';
-
+import { DataContextProvider } from './context/DataContext';
+import Banner from './Banner';
+import Dashboard from './Dashboard';
 import Upload from './Upload';
 import ProcessTransactions from './ProcessTransactions';
-import Dashboard from './Dashboard';
-import { BrowserRouter, Routes, Route, Link } from 'react-router-dom';
-import DataContextProvider from './DataContextProvider';
-import Banner from './Banner';
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
 
 function App() {
   return (
@@ -31,4 +29,5 @@ function App() {
     </div>
   );
 }
+
 export default App;

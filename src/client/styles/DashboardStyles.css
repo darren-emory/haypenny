@@ -233,8 +233,26 @@ div.transaction-amount h5 {
   width: 100%;
   padding: 4px 0;
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
+  z-index: 5;
+  transition: height 0.25s ease; /* smooth transition */
+  overflow: hidden; /* hide overflow during expansion */
+}
+
+.banner.loading {
+  height: 100vh;
+  width: 100vw;
+}
+
+.banner div.spinnerContainer img {
+  transition: opacity 0.5s ease;
+}
+
+.banner.loading div.spinnerContainer img {
+  width: 50px;
+  opacity: 1;
 }
 
 .banner h6 {

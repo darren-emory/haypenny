@@ -21,4 +21,6 @@ export interface ICategory {
 export interface IData {
   transactions: ITransaction[];
   categories: ICategory[];
+  loading: boolean;
+  setLoading: (value: boolean) => void;
 }

@@ -70,7 +70,7 @@ app.put('/data-update-last-import', async (req, res) => {
 });
 
 app.get('/data-last-import', async (req, res) => {
-  const query = `SELECT lastImportDate FROM Imports`;
+  const query = `SELECT * FROM Imports`;
   const [rows] = await pool.query(query);
   res.json(rows);
 });

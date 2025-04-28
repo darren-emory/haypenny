@@ -8,10 +8,11 @@ import moment from 'moment';
 
 import './styles/DashboardStyles.css';
 import Upload from '../icons/Upload';
+import useDataContext from './hooks/useDataContext';
 
 function Dashboard() {
   const navigate = useNavigate();
-  const allData = useContext(DataContext);
+  const allData = useDataContext();
 
   const [categories, setCategories] = useState<ICategory[] | null>(null);
   const [importModalOpen, setImportModalOpen] = useState(false);
