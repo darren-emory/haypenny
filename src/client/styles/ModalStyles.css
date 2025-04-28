@@ -1,0 +1,47 @@
+div.modal {
+  position: fixed;
+  z-index: 100;
+  width: 100vw;
+  height: 100vh;
+  left: 0;
+  top: 30px;
+  display: flex;
+  flex-direction: column;
+}
+
+div.modal-header {
+  display: flex;
+  background-color: #ecedea;
+  justify-content: center;
+  align-items: center;
+  padding: 30px 0;
+  position: relative;
+}
+
+div.modal-header button {
+  position: absolute;
+  left: 60px;
+}
+
+div.modal-content {
+  background-color: #c6c0b1;
+  width: 100%;
+  height: 100%;
+  overflow-y: auto;
+}
+
+div.modal-content-inner {
+  justify-content: center;
+  padding: 30px 0 60px;
+  display: flex;
+}
+
+div.modal form {
+  width: 50%;
+}
+
+div.modal-content form button[type='submit'] {
+  background-color: #c6573b;
+  /* large style */
+  padding: 15px;
+}
