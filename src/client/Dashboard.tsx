@@ -1,7 +1,6 @@
 import { useState, useContext, useEffect } from 'react';
 import { ICategory, ITransaction } from './utils/interfaces';
 import CategoryGrid from './CategoryGrid';
-import { DataContext } from './DataContextProvider';
 import { useNavigate } from 'react-router-dom';
 import { calculateTransactionTotal } from './utils/helperFunctions';
 import moment from 'moment';

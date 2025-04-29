@@ -1,7 +1,5 @@
 import useDataContext from './hooks/useDataContext';
 
-import spinner from '../icons/loading-spinner.svg';
-
 function Banner() {
   const { loading, setLoading } = useDataContext();
 
@@ -10,7 +8,7 @@ function Banner() {
       <h6>haypenny</h6>
       {loading && (
         <div className="spinnerContainer">
-          <img src={spinner} />
+          <img src="/loading-spinner.svg" alt="Loading spinner" />
         </div>
       )}
     </div>
