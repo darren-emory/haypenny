@@ -39,10 +39,14 @@ function EditCategoryModal({ selectedCategory }: Props) {
       </p>
       <p>
         <label htmlFor="limit">Limit:</label>
+
         <input
+          type="number"
           id="limit"
-          type="text"
-          value={updatedCategory.limit || ''}
+          step="any"
+          inputMode="decimal"
+          value={updatedCategory.limit === 0 ? '' : updatedCategory.limit}
+          onWheel={(e) => e.target instanceof HTMLElement && e.target.blur()}
           onChange={(e) =>
             setUpdatedCategory((prev: any) =>
               prev
