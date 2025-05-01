@@ -2,7 +2,10 @@ import { useState, useContext, useEffect } from 'react';
 import { ICategory, ITransaction } from './utils/interfaces';
 import CategoryGrid from './CategoryGrid';
 import { useNavigate } from 'react-router-dom';
-import { calculateTransactionTotal } from './utils/helperFunctions';
+import {
+  calculateCategoryTotal,
+  calculateTransactionTotal,
+} from './utils/helperFunctions';
 import moment from 'moment';
 
 import './styles/DashboardStyles.css';
@@ -32,6 +35,9 @@ function Dashboard() {
                   Number(transaction.categoryId) !== 18
               )
             )}
+            <span
+              style={{ color: '#7b7260', fontSize: '36px' }}
+            >{` / ${calculateCategoryTotal(allData.categories)}`}</span>
           </h1>
         </header>
 
